@@ -8,6 +8,13 @@ a {
   text-decoration: none;
   color: #fafafa;
 }
+a:hover {
+  color: #272727;
+}
+
+body {
+  font-family: "Sofia Sans Condensed";
+}
 
 .navbar {
   background-color: #272727;
@@ -18,9 +25,22 @@ a {
   display: flex;
   flex-wrap: wrap;
   padding: 0.5rem 1rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .navbar .menu-main {
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
 }
 .navbar .menu-main .navbar-logo {
   margin-right: auto;
+}
+@media (min-width: 768px) {
+  .navbar .menu-main .menu-icon {
+    display: none;
+  }
 }
 .navbar .menu-main .menu-icon.exit .line:first-child {
   transform: rotate(45deg) translate(5px, 0px);
@@ -44,17 +64,36 @@ a {
   flex: 0 0 100%;
   display: none;
 }
+@media (min-width: 768px) {
+  .navbar .menu-main .menu-list {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 60%;
+  }
+}
 .navbar .menu-main .menu-list.active {
   display: flex;
   height: 100vh;
   flex-wrap: wrap;
   align-content: center;
 }
+@media (min-width: 768px) {
+  .navbar .menu-main .menu-list.active {
+    height: initial;
+  }
+}
 .navbar .menu-main .menu-list .menu-item {
   flex: 0 0 100%;
   text-align: center;
   padding: 1rem 0;
 }
+@media (min-width: 768px) {
+  .navbar .menu-main .menu-list .menu-item {
+    padding: 0;
+    flex: 0 0 auto;
+  }
+}
+
 section {
   height: 100vh;
   background-color: rgba(240, 183, 93, 0.2588235294);
